@@ -18,7 +18,7 @@ async def _auth(client, message):
   if creds is not None:
     creds.refresh(Http())
     db.set_credential(message.from_user.id, creds)
-    await message.reply_text("🔒 **Already authorized your Google Drive Account.**\n__Use /revoke to revoke the current account.__\n__Send me a direct link or File to Upload on Google Drive__", quote=True)
+    await message.reply_text("🔒 **Already authorized yor Google Drive Account.**\n__Use /revoke to revoke the current account.__\n__Send me a direct link or File to Upload on Google Drive__", quote=True)
   else:
     global flow
     try:
